@@ -1,0 +1,105 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #110a0a;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+.room {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+form label, form input {
+    display: block;
+    margin: 5px 0;
+}
+
+form button {
+    background-color: #664caf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+/* Styles pour la section Réception */
+.reception-section {
+    text-align: center; /* Centre le texte dans la section */
+    padding: 40px 20px; /* Ajoute un peu d'espace autour */
+    background-color: #f8f8f8; /* Fond léger pour la section */
+}
+
+.reception-image {
+    max-width: 80%; /* Limite la largeur de l'image à 80% du conteneur */
+    height: auto; /* Maintient le ratio de l'image */
+    border-radius: 10px; /* Coins arrondis pour une apparence plus douce */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère autour de l'image */
+    margin-top: 20px; /* Espace au-dessus de l'image */
+}
+
+/* Style général pour les sections */
+section {
+    margin: 40px 0; /* Espace entre les sections */
+}
+.phone-icon {
+    margin-left: 10px; /* Espace entre le texte et l'icône */
+    font-size: 24px; /* Taille de l'icône si vous utilisez Font Awesome */
+    color: #007BFF; /* Couleur de l'icône */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.phone-icon img {
+    width: 24px; /* Largeur de l'image d'icône */
+    height: auto; /* Hauteur automatique pour garder le ratio */
+    vertical-align: middle; /* Aligne l'image au milieu du texte */
+}
+.phone-icon {
+    margin-left: 10px; /* Espace entre le texte et l'icône */
+    font-size: 24px; /* Taille de l'icône si vous utilisez Font Awesome */
+    color: #007BFF; /* Couleur de l'icône */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.phone-icon img {
+    width: 24px; /* Largeur de l'image d'icône */
+    height: auto; /* Hauteur automatique pour garder le ratio */
+    vertical-align: middle; /* Aligne l'image au milieu du texte */
+}
