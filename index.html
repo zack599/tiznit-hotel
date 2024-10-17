@@ -1,114 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiznit Hotel</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ajout de Font Awesome -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("YOUR_USER_ID"); // Remplacez "YOUR_USER_ID" par votre identifiant utilisateur EmailJS
-        })();
-    </script>
+    <title>Hôtel Tiznit</title>
+    <style>
+        /* Styles généraux */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+        
+        /* En-tête avec image de fond */
+        header { 
+            background-image: url('piscine.png'); /* Remplacez par l'URL de votre image */
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 160px 40px; 
+            text-align: center; 
+            position: relative;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Opacité pour lisibilité */
+            z-index: 1;
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Navigation */
+        nav { background-color: #008080; padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        
+        /* Conteneur principal */
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        /* Sections */
+        .section { margin-bottom: 40px; }
+        h2 { color: #1bc0c0; }
+        
+        /* Chambres, services et formules */
+        .room, .service, .formula {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .formula h3, .room h3, .service h3 { color: #005c5c; }
+        
+        /* Galerie */
+        .gallery img { width: 30%; margin: 5px; border-radius: 8px; }
+        
+        /* Réservation */
+        .reservation-form { background-color: #f9f9f9; padding: 20px; border-radius: 8px; }
+        
+        /* Pied de page */
+        footer { background-color: #005c5c; color: white; text-align: center; padding: 10px; }
+        
+        /* Liste */
+        .formula ul, .service ul { list-style-type: none; padding: 0; }
+        .formula ul li, .service ul li { padding: 5px 0; }
+    </style>
 </head>
 <body>
 
-    <!-- En-tête du site -->
+    <!-- En-tête -->
     <header>
-        <h1>Bienvenue au Tiznit Hotel</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#rooms">Chambres</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#reservation">Réservation</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#reception">Réception</a></li> <!-- Ajout du lien vers la réception -->
-            </ul>
-        </nav>
+        <h1>Bienvenue à Tiznit Hotel </h1>
+        <p>Un séjour unique au cœur de Tiznit, entre tradition et modernité</p>
     </header>
 
-    <!-- Section Accueil -->
-    <section id="home">
-        <h2>Votre séjour de rêve vous attend</h2>
-        <p>Situé au cœur de Tiznit, le Tiznit Hotel vous offre un séjour inoubliable avec des services exceptionnels et des chambres confortables.</p>
+    <!-- Navigation -->
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#chambres">Chambres</a>
+        <a href="#services">Services</a>
+        <a href="#galerie">Photos</a>
+        <a href="#reservation">Réservation</a>
+        <a href="#formules">Formules</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Accueil -->
+        <section id="accueil" class="section">
+            <h2>À propos de Tiznit Hotel </h2>
+            <p>Situé dans la magnifique ville de Tiznit, notre hôtel vous offre une expérience alliant confort moderne et charme traditionnel marocain.</p>
+            
+            </div>
+        </section>
+
+        <!-- Chambres -->
+        <section id="chambres" class="section">
+            <h2>Nos Chambres</h2>
+            <div class="room">
+                <h3>Chambre Standard</h3>
+                <p>Une chambre confortable avec un lit double, climatisation, et salle de bain privée.</p>
+            </div>
+            <div class="room">
+                <h3>Suite Deluxe</h3>
+                <p>Une suite spacieuse avec salon privé, terrasse et vue imprenable sur la ville de Tiznit.</p>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section">
+            <h2>Nos Services</h2>
+            <div class="service">
+                <h3>Restaurant Marocain</h3>
+                <ul>
+                    <li>Dégustez une cuisine authentique marocaine préparée par nos chefs locaux.</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Bar & After party</h3>
+                <ul>
+                    <li>Profitez des meilleurs soirees .</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Galerie -->
+        <section id="galerie" class="section">
+            <h2>Galerie</h2>
+            <div class="gallery">
+                <img src="piscine.png" alt="Chambre de l'hôtel">
+                <img src="hotel.png" alt="Piscine de l'hôtel">
+                <img src="reception.jpg.jpg" alt="Vue sur Tiznit">
+            </div>
+        </section>
+
+
+        <!-- Formules -->
+         
+        <section id="formules" class="section">
+            <h2>Nos Formules</h2>
+            <div class="formula">
+                <h3>Formule Étudiant</h3>
+                <p>Un séjour économique conçu spécialement pour les étudiants, avec toutes les commodités essentielles.</p>
+                <ul>
+                    <li>2 nuits en chambre partagée (dortoir de 3 lits)</li>
+                    <li>Petit-déjeuner inclus</li>
+                    <li>Accès gratuit à la salle d'étude et au Wi-Fi haut débit</li>
+                    <li>1 dîner traditionnel inclus le premier soir</li>
+                    <li>Visite guidée de Tiznit </li>
+                </ul>
+                <p><strong>Prix :</strong> 500 MAD par personne</p>
+            </div>
+        </section>
+            <div class="formula">
+                <h3>Formule Découverte</h3>
+                <p>Pour les voyageurs souhaitant découvrir Tiznit et ses alentours.</p>
+                <ul>
+                    <li>2 nuits d'hébergement</li>
+                    <li>Petit-déjeuner inclus</li>
+                </ul>
+                <p><strong>Prix :</strong> 1200 MAD</p>
+            </div>
+
+            <div class="formula">
+                <h3>Formule Bien-être</h3>
+                <p>Séjour axé sur la relaxation dans un cadre paisible.</p>
+                <ul>
+                    <li>3 nuits en suite deluxe</li>
+                    <li>Petit déjeuner</li>
+                    <li>Visite guidee a la Medina</li>
+                </ul>
+                <p><strong>Prix :</strong> 2200 MAD</p>
+            </div>
+        </section> <div class="formula">
+            <h3>Formule Romantique</h3>
+            <p>Un séjour idyllique pour les couples, idéal pour une lune de miel ou une célébration spéciale.</p>
+            <ul>
+                <li>4 nuits en suite deluxe décorée pour l'occasion</li>
+                <li>Petit-déjeuner servi en chambre</li>
+                <li>Dîner romantique aux salon traditionnel de restaurant </li>
+                <li>Séance de parapente en duo</li>
+                <li>Excursion privée au coucher du soleil a Legzira </li>
+            </ul>
+            <p><strong>Prix :</strong> 4500 MAD</p>
+        </div>
+     
+
         
-        <!-- Ajouter une image de l'hôtel -->
-        <img src="hotel.jpg" alt="Photo du Tiznit Hotel" class="hotel-image">
-    </section>
 
-    <!-- Section Chambres -->
-    <section id="rooms">
-        <h2>Nos Chambres</h2>
-        <div class="room">
-            <h3>Chambre Standard</h3>
-            <p>Confort et accessibilité, parfait pour un séjour agréable.</p>
-        </div>
-        <div class="room">
-            <h3>Suite Luxe</h3>
-            <p>Pour une expérience de luxe avec vue imprenable et services premium.</p>
-        </div>
-    </section>
-
-    <!-- Section Services -->
-    <section id="services">
-        <h2>Nos Services</h2>
-        <ul>
-            <li>Restaurant gastronomique</li>
-            <li>Service en chambre 24h/24</li>
-            <li>Piscine</li>
-            <li>BAR à disposition</li>
-            <li>Salle de jeux</li>
-            <li>Transfert vers l'aéroport sur réservation</li>
-            <li>Accès Wi-Fi gratuit</li>
-        </ul>
-    </section>
-
-    <!-- Section Réception -->
-    <section id="reception" class="reception-section">
-        <h2>Notre Réception</h2>
-        <p>Notre réception est à votre disposition 24h/24 pour répondre à vos besoins et vous garantir un séjour agréable.</p>
-        <!-- Ajouter l'image de la réception -->
-        <img src="reception.jpg" alt="Photo de la réception" class="reception-image">
-    </section>
-
-    <!-- Section Réservation -->
-    <section id="reservation">
-        <h2>Réserver une chambre</h2>
-        <form id="reservationForm">
+    <section id="reservation" class="section">
+        <h2>Réservez Votre Séjour</h2>
+        <form action="reservation-handler.php" method="post" class="reservation-form">
+            <label for="arrival-date">Date d'arrivée :</label>
+            <input type="date" id="arrival-date" name="arrival-date" required><br><br>
+            
+            <label for="departure-date">Date de départ :</label>
+            <input type="date" id="departure-date" name="departure-date" required><br><br>
+            
+            <label for="guests">Nombre de personnes :</label>
+            <input type="number" id="guests" name="guests" min="1" required><br><br>
+            
             <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">E-mail :</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="checkin">Date d'arrivée :</label>
-            <input type="date" id="checkin" name="checkin" required>
-            
-            <label for="checkout">Date de départ :</label>
-            <input type="date" id="checkout" name="checkout" required>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br>
             
             <button type="submit">Réserver</button>
         </form>
     </section>
+    
+    <!-- Pied de page -->
+    <footer>
+        <div class="contact-info">
+            <p><strong>Tiznit Hotel</strong>
+            <p><strong>Adresse :</strong> Rue Bir Anzarane, Tiznit 85000</p>
+            <p><strong>Téléphone :</strong> 0528 86 24 11</p>
+        <p>&copy; 2024 Hôtel Tiznit - Belkhenfar zakiii</p>
+    </footer>
 
-    <!-- Section Contact -->
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <p>Adresse : Rue Bir Anzarane, Tiznit, 85000, Maroc</p>
-        <p>
-            Email : contact@tiznithotel.com
-        </p>
-        <p>
-            Téléphone : 
-            <a href="tel:+212528862411" class="phone-icon">
-                <i class="fas fa-phone"></i> <!-- Icône de téléphone -->
-            </a>
-        </p>
-    </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
